@@ -23,6 +23,9 @@ Dobzinski's project for Let's Encrypt server to auto deploy of certs.
 * Shell script (curl, md5sum, file, cut, tar, others)
 * OpenSSL
 
+## Screenshot
+![Dashboard](https://github.com/dobzinski/dobz-letsencrypt/blob/master/images/screen-clean.png)
+
 ## Server Install
 
 ###### 1. Packages (simple configure)
