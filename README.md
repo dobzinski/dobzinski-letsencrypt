@@ -24,7 +24,7 @@ Dobzinski's project for Let's Encrypt server to auto deploy of certs.
 * OpenSSL
 
 ## Screenshot
-![Dashboard](https://github.com/dobzinski/dobz-letsencrypt/blob/master/images/screen-clean.png)
+![Dashboard](https://github.com/dobzinski/dobz-letsencrypt/blob/master/images/screenshot.png)
 
 ## Server Install
 
