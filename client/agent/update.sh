@@ -136,11 +136,13 @@ if [ ${APPLY} = true ]; then
  	# BEGIN COMMAND CUSTOM ...
 
  	## BIG IP
- 	#/usr/bin/tmsh install /sys crypto cert ${CERTNAMEBIGIP} from-local-file ${ENABLE}/${NAME}/${FILE}
-	#/usr/bin/tmsh install /sys crypto key ${CERTNAMEBIGIP} from-local-file ${ENABLE}/${NAME}/${KEY}
-	#/usr/bin/tmsh save /sys config
-	## SYNC DG
-	#/usr/bin/tmsh run /cm config-sync to-group ${DG}
+	#if [ "$STATUS" == "ACTIVE" ]; then
+ 		#/usr/bin/tmsh install /sys crypto cert ${CERTNAMEBIGIP} from-local-file ${ENABLE}/${NAME}/${FILE}
+		#/usr/bin/tmsh install /sys crypto key ${CERTNAMEBIGIP} from-local-file ${ENABLE}/${NAME}/${KEY}
+		#/usr/bin/tmsh save /sys config
+		## SYNC DG
+		#/usr/bin/tmsh run /cm config-sync to-group ${DG}
+	#fi
 	## END BIG IP
 
 	# END COMMAND CUSTOM
