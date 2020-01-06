@@ -9,7 +9,7 @@ LOG="/var/log/letsencrypt/renew.log"
 LE="/etc/letsencrypt/live"
 
 # Cert list
-LIST=("desenvolvimento.prf.gov.br" "homologacao.prf.gov.br" "teste.prf.gov.br" "treinamento.prf.gov.br")
+LIST=("example1.domain.com" "example2.domain.com")
 
 # Cert file
 FILE=("fullchain.pem" "privkey.pem")
