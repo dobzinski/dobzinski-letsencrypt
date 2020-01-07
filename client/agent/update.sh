@@ -44,8 +44,8 @@ FROM=$(/usr/bin/md5sum ${DIR}/${NAME}/${FILE} | /bin/cut -d" " -f1)
 TO=$(/usr/bin/md5sum ${ENABLE}/${NAME}/${FILE} | /bin/cut -d" " -f1)
 
 # CERTIFICATE
-FROMCN=$(/usr/bin/openssl x509 -in ${DIR}/${NAME}/${FILE} -subject -noout 2>/dev/null | /bin/grep ${NAME} | /usr/bin/tr -d ' ' | /bin/awk -F'CN=' '{print $2}' | /bin/cut -d',' -f1 )
-TOCN=$(/usr/bin/openssl x509 -in ${ENABLE}/${NAME}/${FILE} -subject -noout 2>/dev/null | /bin/grep ${NAME} | /usr/bin/tr -d ' ' | /bin/awk -F'CN=' '{print $2}' | /bin/cut -d',' -f1)
+FROMCN=$(/usr/bin/openssl x509 -in ${DIR}/${NAME}/${FILE} -subject -noout 2>/dev/null | /bin/grep ${NAME} | /usr/bin/tr -d ' ' | /bin/awk -F'CN=' '{print $2}' | /bin/cut -d',' -f1 | /bin/cut -d'/' -f1)
+TOCN=$(/usr/bin/openssl x509 -in ${ENABLE}/${NAME}/${FILE} -subject -noout 2>/dev/null | /bin/grep ${NAME} | /usr/bin/tr -d ' ' | /bin/awk -F'CN=' '{print $2}' | /bin/cut -d',' -f1 | /bin/cut -d'/' -f1)
 
 # CHECK
 if [ ${DEBUG} = true ]; then
