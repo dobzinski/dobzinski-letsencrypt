@@ -15,7 +15,7 @@ require_once('config.php');
 require_once('functions.php');
 $remote = $_SERVER['REMOTE_ADDR'];
 $token = (isset($_GET['token']) ? $_GET['token'] : null);
-$cert = prepareFile(isset($_GET['file']) ? prepareFile($_GET['file']) : null);
+$cert = prepareFile(isset($_GET['file']) ? $_GET['file'] : null);
 $client = $_clients . $remote .".json";
 if (!is_null($token)) {
     if (is_file($client)) {
